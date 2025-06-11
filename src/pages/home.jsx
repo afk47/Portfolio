@@ -22,11 +22,11 @@ const Home = () => {
     }, [index, text, speed]);
 
     // Memoize CanvasComponent so it is not recreated on every render
-    const memoizedCanvas = useMemo(() => <CanvasComponent className="absolute inset-0 w-full h-full" />, []);
+    const memoizedCanvas = useMemo(() => <CanvasComponent/>, []);
 
     return (
-        <div className="fixed inset-0 w-screen h-screen bg-gray-100 overflow-hidden m-0 p-0 flex items-center justify-center">
-            <div className="absolute inset-0 w-full h-full">
+        <div className="content absolute inset-0 w-full bg-gray-100 h-svh m-0 p-0 flex items-center justify-center">
+            <div className={`absolute inset-0 w-full`}>
                 {memoizedCanvas}
                 {contact && <ContactModal setContact={setContact} />}
                 {!contact && (
