@@ -27,7 +27,7 @@ const ContactModal = ({ setContact }) => {
     };
 
     return (
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-transparent h-1/3 z-20">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-transparent h-3/4 w-3/4  z-20">
             <div className="items-center justify-center bg-transparent relative">
                 <form
                     onSubmit={onSubmit}
@@ -56,7 +56,7 @@ const ContactModal = ({ setContact }) => {
                     <textarea
                         name="message"
                         required
-                        className="w-full mb-4 p-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder-gray-300 max-h-30 font-mono "
+                        className="w-full mb-4 p-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder-gray-300 max-h-100 h-100  font-mono "
                         placeholder="> MSG"
                     ></textarea>
                     <button
