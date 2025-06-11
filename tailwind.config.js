@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'mblonly': {'max': '480px'},
+      },
       colors: {
         green: "#00FF00",
         orange: "#FFA500",

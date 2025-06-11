@@ -23,6 +23,15 @@ const LinksSection = ({ setContact }) => {
                 </a>
                 <br />
                 <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/andrew-marshall-015744265/"
+                    className="bg-transparent m-5 p-2 text-xl font-mono hover:underline sm:text-lg"
+                >
+                    {"> L I N K E D I N"}
+                </a>
+                <br />
+                <a
                     onClick={() => setContact(true)}
                     rel="noopener noreferrer"
                     href="#"
