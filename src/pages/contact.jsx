@@ -38,26 +38,26 @@ export default function Contact({ children }) {
                     name="name"
                     required
                     className="w-full mb-4 p-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder-gray-300 font-mono"
-                    placeholder="> Enter your name"
+                    placeholder="> NAME"
                 />
                 <input
                     type="email"
                     name="email"
                     required
                     className="w-full mb-4 p-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder-gray-300 font-mono"
-                    placeholder="> Enter your email"
+                    placeholder="> EMAIL"
                 />
                 <textarea
                     name="message"
                     required
                     className="w-full mb-4 p-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 placeholder-gray-300 max-h-30 font-mono "
-                    placeholder="> Write your message"
+                    placeholder="> MSG"
                 ></textarea>
                 <button
                     type="submit"
                     className="w-full p-2 bg-gradient-to-r from-orange-500 to-purple-500 text-white font-semibold border-none rounded-lg hover:from-orange-400 hover:to-purple-400 focus:outline-none focus:ring-2 focus:ring-gray-500 transition-all duration-300"
                 >
-                    Submit Form
+                    {"> SEND_"}
                 </button>
             </form>
             <span className="text-white mt-4">{result}</span>
