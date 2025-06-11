@@ -30,10 +30,10 @@ const Home = () => {
                 {memoizedCanvas}
                 {contact && <ContactModal setContact={setContact} />}
                 {!contact && (
-                    <>
+                    <div className="absolute top-0 left-0 w-full h-full">
                         <Header displayText={displayText} text={text} />
                         <LinksSection setContact={setContact} />
-                    </>
+                    </div>
                 )}
             </div>
         </div>
