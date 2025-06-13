@@ -4,6 +4,13 @@ import Header from "../components/Header";
 import LinksSection from "../components/LinksSection";
 import ContactModal from "../components/ContactModal";
 
+/**
+ * Home component that displays the main portfolio page
+ * Features a typewriter effect for the name display and an interactive 3D background
+ * @component
+ * @returns {JSX.Element} The rendered Home component
+ */
+
 const Home = () => {
     const text = "Andrew Marshall";
     const speed = 100;
@@ -22,11 +29,11 @@ const Home = () => {
     }, [index, text, speed]);
 
     // Memoize CanvasComponent so it is not recreated on every render
-    const memoizedCanvas = useMemo(() => <CanvasComponent className="absolute inset-0 w-full h-full" />, []);
+    const memoizedCanvas = useMemo(() => <CanvasComponent/>, []);
 
     return (
-        <div className="fixed inset-0 w-screen h-screen bg-gray-100 overflow-hidden m-0 p-0 flex items-center justify-center">
-            <div className="absolute inset-0 w-full h-full">
+        <div className="content absolute inset-0 w-full bg-gray-100 h-svh m-0 p-0 flex items-center justify-center">
+            <div className={`absolute inset-0 w-full`}>
                 {memoizedCanvas}
                 {contact && <ContactModal setContact={setContact} />}
                 {!contact && (
