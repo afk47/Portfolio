@@ -4,6 +4,13 @@ import Header from "../components/Header";
 import LinksSection from "../components/LinksSection";
 import ContactModal from "../components/ContactModal";
 
+/**
+ * Home component that displays the main portfolio page
+ * Features a typewriter effect for the name display and an interactive 3D background
+ * @component
+ * @returns {JSX.Element} The rendered Home component
+ */
+
 const Home = () => {
     const text = "Andrew Marshall";
     const speed = 100;
