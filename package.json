@@ -1,26 +1,13 @@
 {
-  "name": "andrew-marshall-portfolio",
-  "private": false,
+  "name": "mysite",
+  "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Personal portfolio website featuring interactive 3D background and modern UI",
-  "author": "Andrew Marshall",
-  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "preview": "vite preview",
-    "format": "prettier --write 'src/**/*.{js,jsx}'",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "preview": "vite preview"
   },
   "dependencies": {
     "@react-three/drei": "^10.1.2",
@@ -46,21 +33,5 @@
     "globals": "^16.0.0",
     "vite": "^6.3.5",
     "vite-plugin-glsl": "^1.4.2"
-  },
-  "keywords": [
-    "portfolio",
-    "react",
-    "vite",
-    "webgl",
-    "three.js",
-    "tailwindcss",
-    "personal-website"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/afk47/MySite"
-  },
-  "bugs": {
-    "url": "https://github.com/afk47/MySite/issues"
   }
 }
