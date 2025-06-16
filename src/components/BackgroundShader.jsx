@@ -15,14 +15,23 @@ extend({ ShaderMaterial: THREE.ShaderMaterial });
  */
 const AnimatedBackgroundShader = () => {
     const shaderRef = React.useRef();
+    const mouse = React.useRef({x:1,y:1})
+    const mouseTarget = React.useRef({x:1,y:1})
     useFrame(({ clock }) => {
         if (shaderRef.current) {
-            shaderRef.current.uniforms.uTime.value = clock.getElapsedTime();
+            const time = clock.getElapsedTime();
+            shaderRef.current.uniforms.uTime.value = time;
+            
+            console.log(mouse.current.x);
+            mouse.current.x = MathUtils.lerp(mouse.current.x,mouseTarget.current.x,0.1)
+            mouse.current.y = MathUtils.lerp(mouse.current.y,mouseTarget.current.y,0.1);
+            shaderRef.current.uniforms.uMouse.value.set(mouse.current.x,mouse.current.y);
         }
     });
 
     const handleMouseMove = (evt) => {
-        shaderRef.current.uniforms.uMouse.value.set(evt.clientX, evt.clientY );
+        mouseTarget.current.x = evt.clientX;
+        mouseTarget.current.y = evt.clientY;
     };
     useEffect(() => {
         const handleResize = () => {
