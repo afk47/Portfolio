@@ -17,7 +17,7 @@ const Home = () => {
     const [displayText, setDisplayText] = useState("");
     const [index, setIndex] = useState(0);
     const [contact, setContact] = useState(false);
-
+    
     useEffect(() => {
         if (index < text.length) {
             const timer = setTimeout(() => {
