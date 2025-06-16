@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ContactModal = ({ setContact }) => {
+const ContactModal = ({ setContent }) => {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -35,7 +35,7 @@ const ContactModal = ({ setContact }) => {
                 >
                     <button
                         className="absolute bg-red-transparent top-0 right-1"
-                        onClick={() => setContact(false)}
+                        onClick={() => setContent("")}
                     >
                         x
                     </button>
