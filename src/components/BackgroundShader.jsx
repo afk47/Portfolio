@@ -43,7 +43,6 @@ const AnimatedBackgroundShader = () => {
             try {
                 const width = canvas.clientWidth;
                 const height = canvas.clientHeight;
-                console.log(width);
                 shaderRef.current.uniforms.uResolution.value.set(
                     width || 1814,
                     height || 1480
