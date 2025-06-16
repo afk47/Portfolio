@@ -1,6 +1,6 @@
 import React from "react";
 
-const LinksSection = ({ setContact }) => {
+const LinksSection = ({ setContent }) => {
     return (
         <div className="absolute bottom-1/3 right-0 m-5 text-white">
             <div className="text-left">
@@ -32,12 +32,21 @@ const LinksSection = ({ setContact }) => {
                 </a>
                 <br />
                 <a
-                    onClick={() => setContact(true)}
+                    onClick={() => setContent("contact")}
                     rel="noopener noreferrer"
                     href="#"
                     className="bg-transparent m-5 p-2 text-xl font-mono hover:underline sm:text-lg"
                 >
                     {"> C O N T A C T"}
+                </a>
+                <br/>
+                <a
+                    onClick={() => setContent("about")}
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="bg-transparent m-5 p-2 text-xl font-mono hover:underline sm:text-lg"
+                >
+                    {"> A B O U T"}
                 </a>
                 <br />
             </div>

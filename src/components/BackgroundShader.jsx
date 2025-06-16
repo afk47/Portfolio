@@ -21,10 +21,8 @@ const AnimatedBackgroundShader = () => {
         if (shaderRef.current) {
             const time = clock.getElapsedTime();
             shaderRef.current.uniforms.uTime.value = time;
-            
-            console.log(mouse.current.x);
-            mouse.current.x = MathUtils.lerp(mouse.current.x,mouseTarget.current.x,0.1)
-            mouse.current.y = MathUtils.lerp(mouse.current.y,mouseTarget.current.y,0.1);
+            mouse.current.x = MathUtils.lerp(mouse.current.x, mouseTarget.current.x,0.1)
+            mouse.current.y = MathUtils.lerp(mouse.current.y, mouseTarget.current.y,0.1);
             shaderRef.current.uniforms.uMouse.value.set(mouse.current.x,mouse.current.y);
         }
     });
