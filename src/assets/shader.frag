@@ -1,8 +1,11 @@
 //CC0 - Credit mrange https://www.shadertoy.com/view/lfc3zr modified slightly to work in threejs
 uniform float uTime;
 uniform vec2 uResolution;
+uniform vec2 uMouse;
 varying vec2 fragCoord;
+
 #define TIME        uTime
+#define MOUSE       uMouse
 #define RESOLUTION  uResolution
 #define PI          3.141592654
 #define TAU         (2.0*PI)
@@ -217,7 +220,7 @@ vec3 render1(vec3 ro, vec3 rd) {
 
 vec3 effect(vec2 p) {
   float a = TIME*0.25;
-  vec3 r0 = vec3(1.0, sin(vec2(sqrt(0.5), 1.0)*a));
+  vec3 r0 = vec3(1.0, sin(vec2(sqrt(0.5), 1.0)*a+ MOUSE * vec2(.005)));
   vec3 r1 = vec3(cos(vec2(sqrt(0.5), 1.0)*0.913*a), 1.0);
   mat3 rot = rot(normalize(r0), normalize(r1));
   g_rot = rot;
@@ -242,7 +245,11 @@ vec3 effect(vec2 p) {
 void main() {
   vec2 q = gl_FragCoord.xy/RESOLUTION.xy;
   vec2 p = -1. + 2. * q;
+  vec2 translation = vec2(-0.5,-0.5);
+  vec2 scale = vec2(1.5,1.5);
+  p += translation;
   p.x *= RESOLUTION.x/RESOLUTION.y;
+  p /= scale;
 
   vec3 col = effect(p);
 
